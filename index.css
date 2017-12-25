@@ -40,6 +40,10 @@ h2::after{
   background-color: #ff6666;
   margin-left: 10px;
 }
+h3{
+  opacity:0.8;
+  font-weight: 400;
+}
 h4{
   margin: 0;
   margin-top: 40px;
@@ -68,7 +72,7 @@ hr{
   border: solid 8px white;
   padding: 50px;
   position: relative;
-  
+  overflow: hidden;
 }
 .left{
   flex:5;
@@ -86,6 +90,7 @@ hr{
 .right{
   padding-left: 50px;
   padding-top: 150px;
+  overflow: hidden;
 }
 .decoration{
   width: 300px;
@@ -95,13 +100,32 @@ hr{
   position: absolute;
   right: 0px;
   top: 50px;
+  transform: translateX(35px) translateY(-30px) rotate(-15deg);
+}
+.decoration2{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#ff6666,#fca4a4);
+  position: absolute;
+  right: 800px;
+  bottom: -35px;
+}
+.decoration3{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#ff6666,#fca4a4);
+  position: absolute;
+  right: -60px;
+  bottom: 200px;
 }
 .profile{
     position: absolute;
-    width: 30%;
-    border-radius: 10px;
-    right: 25px;
-    top: 5px;
+    width: 200px;
+    border-radius: 50%;
+    top: 35px;
+    left: 500px;
 }
 
 .listExperience>li{
