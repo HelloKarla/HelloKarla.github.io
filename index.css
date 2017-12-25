@@ -106,7 +106,7 @@ hr{
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg,#ff6666,#fca4a4);
+  background: linear-gradient(165deg,#ff6666,#fca4a4);
   position: absolute;
   right: 800px;
   bottom: -35px;
@@ -115,7 +115,7 @@ hr{
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: linear-gradient(135deg,#ff6666,#fca4a4);
+  background: linear-gradient(150deg,#ff6666,#fca4a4);
   position: absolute;
   right: -60px;
   bottom: 200px;
