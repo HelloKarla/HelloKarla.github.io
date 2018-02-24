@@ -192,7 +192,7 @@ hr{
   border-radius:50%;
   position: relative;
   overflow: hidden;
-  background-color: rgba(252, 93, 93,0.5);
+  background-color: rgba(249, 134, 134,0.5);
 }
 .circle::after{
   content:"";
@@ -212,28 +212,28 @@ hr{
   position: absolute;
   left:50%;
   top: 0;
-  background-color: #fc5d5d;
+  background-color: #fc7676;
 }
 .p180{
   width: 50%;
   height: 100%;
   position: absolute;
   left: 50%;
-  background-color: #fc5d5d;
+  background-color: #fc7676;
 }
 .p270-1{
   width: 50%;
   height: 100%;
   position: absolute;
   left: 50%;
-  background-color: #fc5d5d;
+  background-color: #fc7676;
 }
 .p270-2{
   width: 50%;
   height: 50%;
   position: absolute;
   top: 50%;
-  background-color: #fc5d5d;
+  background-color: #fc7676;
 }
 
 
@@ -253,7 +253,7 @@ hr{
 .value{
   height: 100%;
   width: 60%;
-  background-color: #fc5d5d;
+  background-color: #fc7676;
 }
 .value.p10{
   width: 10%;
