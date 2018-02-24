@@ -5,8 +5,325 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Resume</title>
-    <link rel="stylesheet" type="" href="./index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">
+    <style>
+      *{
+    font-family: 'Cinzel','微軟正黑體';
+}
+
+body{
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: #8bc9b2;
+  color:rgba(51, 51, 51,0.9);
+  font-size: 15px;
+  line-height:28px;
+  letter-spacing:2px;
+  font-weight: 400;
+}
+
+/* 複寫區 */
+ul{
+  padding: 0;
+  list-style: none;
+}
+p{
+    opacity: 0.8;
+}
+h1{
+  opacity: 0.8;
+}
+
+h2{
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 400;
+  opacity:0.8;
+}
+h2::after{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 8px;
+  background-color: #fca4a4;
+  margin-left: 10px;
+}
+h3{
+  opacity:0.8;
+  font-weight: 400;
+}
+h4{
+  margin: 0;
+  margin-top: 40px;
+  opacity:0.8;
+  font-weight: 400;
+}
+.info{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+a{
+  color: white;
+  opacity:0.8;
+  text-decoration: none;
+}
+hr{
+  border: none;
+  border-bottom: solid 4px #fca4a4;
+  width: 70%;
+  margin-left: 0;
+}
+
+.resume{
+  display: flex;
+  width:950px;
+  border: solid 8px white;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.left{
+  flex:5;
+  border-right:solid 1px #fca4a4;
+  background-color: #8bc9b2
+}
+.right{
+  flex:7;
+  background-color: #d6dbdb;
+}
+.left,.right{
+  padding: 15px;
+}
+.left{
+  padding-right: 50px;
+}
+.right{
+  padding-left: 50px;
+  padding-top: 150px;
+  overflow: hidden;
+}
+.decoration{
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg,#fca4a4,#ffd3d3);
+  border-radius: 50%;
+  position: absolute;
+  right: 550px;
+  top: -35px;
+}
+.decoration2{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(165deg,#fca4a4,#ffd3d3);
+  position: absolute;
+  right: 800px;
+  bottom: -35px;
+}
+.decoration3{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(150deg,#fca4a4,#ffd3d3);
+  position: absolute;
+  right: -60px;
+  bottom: 200px;
+}
+.profile{
+    position: absolute;
+    width: 180px;
+    border-radius: 50%;
+    top: 85px;
+    right: 120px;
+}
+
+.listExperience>li{
+  display: flex;
+  margin-bottom: 10px; 
+}
+.listExperience>li:nth-child(1) ul{
+  border-color:#fc5d5d;
+}
+.listExperience>li:nth-child(2) ul{
+  border-color:#fc7676;
+}
+.listExperience>li:nth-child(3) ul{
+  border-color:#f98686;
+}
+.listExperience>li:nth-child(4) ul{
+  border-color:#f9a4a4;
+}
+.listExperience li ul{
+  padding-left: 10px;
+  margin-left: 10px; 
+  border-left: solid 3px white; 
+} 
+.listPortfolio>li{
+  display: flex;
+  margin-bottom: 10px; 
+}
+.listPortfolio>li:nth-child(1) ul{
+  border-color:#fc5d5d;
+}
+.listPortfolio>li:nth-child(2) ul{
+  border-color:#fc7676;
+}
+.listPortfolio>li:nth-child(3) ul{
+  border-color:#f98686;
+}
+.listPortfolio li ul{
+  padding-left: 10px;
+  margin-left: 10px;
+  border-left: solid 3px white;
+}
+
+/* list skills */
+.listSkill{
+  display: flex;
+  flex-wrap: wrap;
+}
+.listSkill li{
+  display:flex;
+  flex-direction:column;
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+
+
+.circle{
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius:50%;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(249, 134, 134,0.5);
+}
+.circle::after{
+  content:"";
+  display: block;
+  background-color: #8bc9b2;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border-radius:50%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%)
+}
+.p90{
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  left:50%;
+  top: 0;
+  background-color: #fc7676;
+}
+.p180{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  background-color: #fc7676;
+}
+.p270-1{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  background-color: #fc7676;
+}
+.p270-2{
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  background-color: #fc7676;
+}
+
+
+/* list program */
+.listProgram .bar{
+  width: 150px;
+  height: 10px;
+  border: solid 2px #7c7c7c;
+  border-radius: 5px;
+}
+.listProgram li{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+.value{
+  height: 100%;
+  width: 60%;
+  background-color: #fc7676;
+}
+.value.p10{
+  width: 10%;
+}
+.value.p40{
+  width: 40%;
+}
+.value.p50{
+  width: 50%;
+}
+.value.p60{
+  width: 60%;
+}
+.value.p65{
+  width: 65%;
+}
+.value.p70{
+  width: 70%;
+}
+.value.p80{
+  width: 80%;
+}
+.value.p85{
+  width: 85%;
+}
+
+.btn{
+  border: solid 3px #fc5d5d;
+  padding:5px 10px;
+  margin-right: 10px;
+}
+.fill{
+  background-color: #fc5d5d;
+}
+.potfoliohref{
+  border-style: none;
+  background-color: #d6dbdb;
+  color: #7b504a;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  opacity:0.8;
+  border-radius: 8px;
+  opacity: 0.8;
+  padding: 5px;
+}
+.potfoliohref:focus{
+  outline: none;
+}
+.potfoliohref:hover{
+  filter: brightness(85%); 
+}
+.madebyscratch{
+  letter-spacing: 2.7px;
+}
+.madebygithub{
+  letter-spacing: 4.8px;
+}
+    </style>
 </head>
 <body>
     <div class="resume">
