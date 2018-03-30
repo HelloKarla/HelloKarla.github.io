@@ -316,53 +316,6 @@ hr{
 .madebygithub{
   letter-spacing: 4.8px;
 }
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; 
-}
-.modal-content {
-    background-color: rgba(0,0,0,0.4);
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-button{
-  background-color: #d6dbdb;
-  border-style: none;
-  cursor: pointer;
-  color: #7b504a;
-  font-size: 15px;
-  line-height: 28px;
-  letter-spacing: 2px;
-  font-weight: 400;
-  opacity: 0.8;
-  border-radius: 8px;
-}
-button:focus{
-  outline: none;
-}
-button:hover{
-  filter: brightness(85%); 
-}
     </style>
 </head>
 <body>
@@ -469,42 +422,10 @@ button:hover{
         </li>
         <li class="madebygithub">Github  
           <ul>
-            <li>
-              <button id="myBtn1">購物網站(以貓咪為商品)</button>
-              <div id="myModal1" class="modal">
-                <div class="modal-content">
-                  <span class="close close1">&times;</span>
-                  <video class="mx-auto" src="./access/catweb.mov" width="1024" height="500" controls ></video>
-                </div>
-              </div>
-          </li>
-            <li>
-              <button id="myBtn2">美食部落格(Bootstrap)</button>
-              <div id="myModal2" class="modal">
-                <div class="modal-content">
-                  <span class="close close2">&times;</span>
-                  <video class="mx-auto" src="./access/blog.mov" width="1024" height="500" controls></video>
-                </div>
-              </div>
-            </li>
-            <li>
-              <button id="myBtn3">聯合履歷</button>
-              <div id="myModal3" class="modal">
-                <div class="modal-content">
-                  <span class="close close3">&times;</span>
-                  <video class="mx-auto" src="./access/resume.mov" width="1024" height="500" controls></video>
-                </div>
-              </div>
-            </li>
-            <li>
-              <button id="myBtn4">服飾網站(仿照Maipple)</button>
-              <div id="myModal4" class="modal">
-                <div class="modal-content">
-                  <span class="close close4">&times;</span>
-                  <video class="mx-auto" src="./access/maipple.mov" width="1024" height="500" controls></video>
-                </div>
-              </div>
-            </li>
+            <li><a class="potfoliohref" href="http://catweb.hellokarla.nctu.me/?" target="_blank">購物網站(以貓咪為商品)</a></li>
+            <li><a class="potfoliohref" href="http://foodblog.hellokarla.nctu.me/?" target="_blank">美食部落格(Bootstrap)</a></li>
+            <li><a class="potfoliohref" href="http://resume.hellokarla.nctu.me/" target="_blank">聯合履歷</a></li>
+            <li><a class="potfoliohref" href="http://maipple.hellokarla.nctu.me/?" target="_blank">服飾網站(仿照Maipple)</a></li>
           </ul>
         </li>
         <li class="madebycodepen">CodePen
@@ -558,71 +479,4 @@ button:hover{
   </div>
 </div>
 </body>
-<script>
-  var modal1 = document.getElementById('myModal1');
-  var modal2 = document.getElementById('myModal2');
-  var modal3 = document.getElementById('myModal3');
-  var modal4 = document.getElementById('myModal4');  
-  
-
-  var btn1 = document.getElementById("myBtn1");
-  var btn2 = document.getElementById("myBtn2");
-  var btn3 = document.getElementById("myBtn3");
-  var btn4 = document.getElementById("myBtn4");
-  
-
-  var span1 = document.getElementsByClassName("close1")[0];
-  var span2 = document.getElementsByClassName("close2")[0];
-  var span3 = document.getElementsByClassName("close3")[0];
-  var span4 = document.getElementsByClassName("close4")[0];
-  
-  
-
-  btn1.onclick = function () {
-    modal1.style.display = "block";
-  }
-  btn2.onclick = function () {
-      modal2.style.display = "block";
-    }
-  btn3.onclick = function () {
-      modal3.style.display = "block";
-    }
-  btn4.onclick = function () {
-      modal4.style.display = "block";
-    }
-
-  span1.onclick = function () {
-    modal1.style.display = "none";
-  }
-  span2.onclick = function () {
-      modal2.style.display = "none";
-    }
-  span3.onclick = function () {
-      modal3.style.display = "none";
-    } 
-  span4.onclick = function () {
-      modal4.style.display = "none";
-    }    
-
-  window.onclick = function (event) {
-    if (event.target == modal1) {
-      modal1.style.display = "none";
-    }
-  }
-  window.onclick = function (event) {
-      if (event.target == modal2) {
-        modal2.style.display = "none";
-      }
-    }
-  window.onclick = function (event) {
-      if (event.target == modal3) {
-        modal3.style.display = "none";
-      }
-    } 
-  window.onclick = function (event) {
-      if (event.target == modal4) {
-        modal4.style.display = "none";
-      }
-    }    
-</script>
 </html>
