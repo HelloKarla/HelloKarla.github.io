@@ -117,7 +117,7 @@ hr{
   border-radius: 50%;
   position: absolute;
   right: 550px;
-  top: -35px;
+  top: -55px;
 }
 .decoration2{
   width: 80px;
@@ -135,7 +135,7 @@ hr{
   background: linear-gradient(150deg,#fca4a4,#ffd3d3);
   position: absolute;
   right: -60px;
-  bottom: 200px;
+  bottom: 100px;
 }
 .profile{
     position: absolute;
@@ -321,11 +321,11 @@ hr{
 .potfoliohref:hover{
   filter: brightness(85%); 
 }
-.madebyscratch{
+.scratch{
   letter-spacing: 2.7px;
 }
-.madebygithub{
-  letter-spacing: 4.8px;
+.website{
+  letter-spacing: 3.5px;
 }
 .buttons .btn{
   color: rgba(51, 51, 51,0.9);
@@ -347,6 +347,9 @@ hr{
   margin: 10px;
   position: relative;
 }
+.monster:active{
+  transform: scale(0.01) rotate(360deg);
+}
 .eye{
     width: 40%;
     height: 40%;
@@ -362,7 +365,7 @@ hr{
     height: 50%;
     border-radius: 50%;
     background-color: #053a26;
-    animation: eyemove 1.6s infinite alternate 
+    animation: eyemove 1.4s infinite alternate 
 }
 .mouth{
     width: 40%;
@@ -373,9 +376,20 @@ hr{
 }
 .blue{
     background-color: #0C4475;
-    animation: jumping 0.8s infinite alternate;
+    animation: jumping 0.7s infinite alternate;
+    width: 40px;
+    height: 40px;
 }
-    
+.white{
+    background-color: #d6dbdb;
+    animation: jumping 0.4s infinite alternate;
+    width: 30px;
+    height: 30px;
+    animation: eyemove 1.4s infinite alternate 
+}
+.white .mouth{
+  background-color: #ffa1a1;
+}   
 .blue .mouth,.eyeball{
     background-color: #E55A54;
 }
@@ -397,9 +411,533 @@ hr{
         transform: translate(-50%);
     }
 }
+.allstars{
+    width:100%;
+    height:100%;
+    border-radius:0;
+    position:absolute;
+    left:0;
+    top:0;
+}
+@keyframes falling{
+  0%,100%{
+      opacity:0
+  }
+  70% {
+      opacity:1
+  }
+  0%{
+      transform:translate(300px, 0px)
+  }
+  100%{
+      transform:translate(0px, 600px)
+  }
+}
+[class^='star']{
+    background-color:#8a543b;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    animation: falling 3s infinite
+}
+.star1{
+    position:absolute;
+    left:97.69677%;
+    top:24.53612%;
+    animation-delay:-.1s
+}
+.star2{
+    position:absolute;
+    left:74.43672%;
+    top:-.83212%;
+    animation-delay:-.2s
+}
+.star3{
+    position:absolute;
+    left:36.75899%;
+    top:32.6216%;
+    animation-delay:-.3s
+}
+.star4{
+    position:absolute;
+    left:97.29523%;
+    top:-7.91161%;
+    animation-delay:-.4s
+}
+.star5{
+    position:absolute;
+    left:8.82968%;
+    top:34.04033%;
+    animation-delay:-.5s
+}
+.star6{
+    position:absolute;
+    left:98.64008%;
+    top:2.89506%;
+    animation-delay:-.6s
+}
+.star7{
+    position:absolute;
+    left:61.80718%;
+    top:32.77453%;
+    animation-delay:-.7s
+}
+.star8{
+    position:absolute;
+    left:28.01275%;
+    top:40.82553%;
+    animation-delay:-.8s
+}
+.star9{
+    position:absolute;
+    left:98.34611%;
+    top:21.96236%;
+    animation-delay:-.9s
+
+}
+.star10{
+    position:absolute;
+    left:4.70734%;
+    top:16.28185%;
+    animation-delay:-1s
+}
+.star11{
+    position:absolute;
+    left:49.69735%;
+    top:1.18789%;
+    animation-delay:-1.1s
+}
+.star12{
+    position:absolute;
+    left:41.36892%;
+    top:18.06489%;
+    animation-delay:-1.2s
+}
+.star13{
+    position:absolute;
+    left:61.54889%;
+    top:36.8363%;
+    animation-delay:-1.3s
+}
+.star14{
+    position:absolute;
+    left:62.8623%;
+    top:36.36263%;
+    animation-delay:-1.4s
+}
+.star15{
+    position:absolute;
+    left:95.10563%;top:-23.02804%;
+    animation-delay:-1.5s
+}
+.star16{
+    position:absolute;
+    left:17.27737%;top:-22.82753%;
+    animation-delay:-1.6s
+}
+.star17{
+    position:absolute;
+    left:36.23302%;
+    top:35.92515%;
+    animation-delay:-1.7s
+}
+.star18{
+    position:absolute;
+    left:97.5315%;
+    top:39.88051%;
+    animation-delay:-1.8s
+}
+.star19{
+    position:absolute;
+    left:55.57047%;top:-10.29828%;
+    animation-delay:-1.9s
+}
+.star20{
+    position:absolute;
+    left:84.20548%;top:15.25933%;
+    animation-delay:-2s
+}
+.star21{
+    position:absolute;
+    left:69.53573%;
+    top:2.7786%;
+    animation-delay:-2.1s
+}
+.star22{
+    position:absolute;
+    left:67.14975%;
+    top:45.29703%;
+    animation-delay:-2.2s
+}
+.star23{
+    position:absolute;
+    left:40.94796%;
+    top:-1.76235%;
+    animation-delay:-2.3s
+}
+.star24{
+    position:absolute;
+    left:10.35687%;
+    top:-10.9244%;
+    animation-delay:-2.4s
+}
+.star25{
+    position:absolute;
+    left:53.28826%;
+    top:35.05372%;
+    animation-delay:-2.5s
+}
+.star26{
+    position:absolute;
+    left:76.42311%;
+    top:4.74603%;
+    animation-delay:-2.6s
+}
+.star27{
+    position:absolute;
+    left:84.8697%;
+    top:-5.55596%;
+    animation-delay:-2.7s
+}
+.star28{
+    position:absolute;
+    left:42.34674%;
+    top:45.15627%
+    ;animation-delay:-2.8s
+}
+.star29{
+    position:absolute;
+    left:80.37981%;
+    top:-23.37453%;
+    animation-delay:-2.9s
+}
+.star30{
+    position:absolute;
+    left:28.26336%;
+    top:24.63348%;
+    animation-delay:-3s
+}
+.star31{
+    position:absolute;
+    left:82.29952%;
+    top:15.16642%;
+    animation-delay:-3.1s
+}
+.star32{
+    position:absolute;
+    left:38.5173%;
+    top:-7.60171%;
+    animation-delay:-3.2s
+}
+.star33{
+    position:absolute;
+    left:62.61606%;
+    top:44.81672%;
+    animation-delay:-3.3s
+}
+.star34{
+    position:absolute;
+    left:71.21598%;
+    top:11.68395%;
+    animation-delay:-3.4s
+}
+.star35{
+    position:absolute;
+    left:49.64915%;
+    top:5.37542%;
+    animation-delay:-3.5s
+}
+.star36{
+    position:absolute;
+    left:35.74789%;
+    top:.35066%;
+    animation-delay:-3.6s
+}
+.star37{
+    position:absolute;
+    left:98.18171%;
+    top:-5.49863%;
+    animation-delay:-3.7s
+}
+.star38{
+    position:absolute;
+    left:35.26718%;
+    top:14.33433%;
+    animation-delay:-3.8s
+}
+.star39{
+    position:absolute;
+    left:90.9469%;
+    top:18.84447%;
+    animation-delay:-3.9s
+}
+.star40{
+    position:absolute;
+    left:10.89071%;
+    top:39.2409%;
+    animation-delay:-4s
+}
+.star41{
+    position:absolute;
+    left:40.95242%;
+    top:40.64476%;
+    animation-delay:-4.1s
+}
+.star42{
+    position:absolute;
+    left:57.48953%;
+    top:38.28042%;
+    animation-delay:-4.2s
+}
+.star43{
+    position:absolute;
+    left:8.65248%;
+    top:33.01234%;
+    animation-delay:-4.3s
+}
+.star44{
+    position:absolute;
+    left:36.58408%;
+    top:-3.79296%;
+    animation-delay:-4.4s
+}
+.star45{
+    position:absolute;
+    left:83.00056%;
+    top:-29.02163%;
+    animation-delay:-4.5s
+}
+.star46{
+    position:absolute;
+    left:7.47827%;
+    top:-15.86859%;
+    animation-delay:-4.6s
+}
+.star47{
+    position:absolute;
+    left:90.58001%;
+    top:-3.09892%;
+    animation-delay:-4.7s
+}
+.star48{
+    position:absolute;
+    left:4.06984%;
+    top:-15.00216%;
+    animation-delay:-4.8s
+}
+.star49{
+    position:absolute;
+    left:20.69138%;
+    top:26.04789%;
+    animation-delay:-4.9s
+}
+.star50{
+    position:absolute;
+    left:44.28033%;
+    top:-3.39053%;
+    animation-delay:-5s
+}
+.scene{
+    width:200px;
+    height:180px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: transparent;
+    position:relative;
+    background-color: black;
+}
+.person1{
+    position:relative
+}
+.person1 .hairs{
+    position:relative
+}
+.person1 .hairs .hair1{
+    width: 100px;
+    height:60px;
+    border-radius:40px;
+    background-color:#f9f2e8;
+    box-shadow:inset -10px -10px 0 rgba(0,0,0,0.1);
+    margin-left:10px
+}
+.person1 .hairs .hair2{
+    width:100px;
+    height:40px;
+    border-radius:30px;
+    background-color:#f9f2e8;
+    box-shadow:inset -10px -10px 0 rgba(0,0,0,0.1);
+    margin-left:40px;
+    margin-top:-25px
+}
+.person1 .hairs .hair3{
+    width:100px;
+    height:50px;
+    border-radius:35px;
+    background-color:#f9f2e8;
+    box-shadow:inset -10px -10px 0 rgba(0,0,0,0.1);
+    margin-left:-5px;
+    margin-top:-35px
+}
+.person1 .body1{
+    width:140px;
+    height:130px;
+    border-radius:40px;
+    padding-top:50px;
+    margin-top:-40px;
+    background-color:#f7d351;
+    box-shadow:inset -10px -10px 0 rgba(0,0,0,0.1)
+}
+.person1 .body1 .eyes .eye{
+    width:40px;
+    height:22px;
+    border-radius:12.5px;
+    display:inline-block;
+    margin-right:5px;
+    margin-left:15px;
+    background-color:#f9f2e8
+}
+.person1 .body1 .eyes .eye .eyeball{
+    width:22px;
+    height:22px;
+    border-radius:12.5px;
+    background-color:#0f4e89
+}
+.person1 .body1 .mouth{
+    width:50px;
+    height:18px;
+    border-radius:12.5px;
+    margin-left:50px;
+    margin-top:10px;
+    background-color:#f4ad50
+}
+.person1 .body1 .mouth .food{
+    width:10px;
+    height:10px;
+    border-radius:6px;
+    margin-left:-20px;
+    margin-top:10px;
+    background-color:#f4ad50
+}
+.person1{
+    transition:0.5s
+}
+.person1 .body1{
+    transition:0.5s,background-color 4s 1s
+}
+.person1 *{
+    transition:0.5s
+}
+.scene:hover .person1{
+    margin-top:50px
+}
+.scene:hover .person1 .body1{
+    box-shadow:inset -10px -10px 0 rgba(0,0,0,0.1),30px 10px rgba(0,0,0,0.1)
+}
+.scene:hover .person1 .body1 .hairs .hair3{
+    margin-left:0
+}
+.scene:hover .person1:hover{
+    transform:translateX(40px)
+}
+.scene:hover .person1:hover .body1{
+    box-shadow:inset -10px -10px 0 rgba(0,0,0,0.1),-30px 10px rgba(0,0,0,0.1);
+    background-color:#f4ad50
+}
+.scene:hover .person1:hover .eyes{
+    transform:translateX(20px)
+}
+.scene:hover .person1:hover .eyeball{
+    transform:translateX(15px)
+}
+.scene:hover .person1:hover .mouth{
+    transform:translateX(20px)
+}
+.scene:active .person1{
+    transform:scale(0.9)
+}
+.scene:active .person1 .hairs{
+    transform:translateY(-50px)
+}
+
+
+
     </style>
 </head>
 <body>
+  <div class="allstars">
+    <div class="star1"></div>
+    <div class="star2"></div>
+    <div class="star3"></div>
+    <div class="star4"></div>
+    <div class="star5"></div>
+    <div class="star6"></div>
+    <div class="star7"></div>
+    <div class="star8"></div>
+    <div class="star9"></div>
+    <div class="star10"></div>
+    <div class="star11"></div>
+    <div class="star12"></div>
+    <div class="star13"></div>
+    <div class="star14"></div>
+    <div class="star15"></div>
+    <div class="star16"></div>
+    <div class="star17"></div>
+    <div class="star18"></div>
+    <div class="star19"></div>
+    <div class="star20"></div>
+    <div class="star21"></div>
+    <div class="star22"></div>
+    <div class="star23"></div>
+    <div class="star24"></div>
+    <div class="star25"></div>
+    <div class="star26"></div>
+    <div class="star27"></div>
+    <div class="star28"></div>
+    <div class="star29"></div>
+    <div class="star30"></div>
+    <div class="star31"></div>
+    <div class="star32"></div>
+    <div class="star33"></div>
+    <div class="star34"></div>
+    <div class="star35"></div>
+    <div class="star36"></div>
+    <div class="star37"></div>
+    <div class="star38"></div>
+    <div class="star39"></div>
+    <div class="star40"></div>
+    <div class="star41"></div>
+    <div class="star42"></div>
+    <div class="star43"></div>
+    <div class="star44"></div>
+    <div class="star45"></div>
+    <div class="star46"></div>
+    <div class="star47"></div>
+    <div class="star48"></div>
+    <div class="star49"></div>
+    <div class="star50"></div> 
+    <div class="scene">
+      <div class="person1">
+        <div class="hairs">
+          <div class="hair1"></div>
+          <div class="hair2"></div>
+          <div class="hair3"></div>
+        </div>
+        <div class="body1">
+          <div class="eyes">
+            <div class="eye">
+              <div class="eyeball"></div>
+            </div>
+            <div class="eye">
+              <div class="eyeball"></div>
+            </div>
+          </div>
+          <div class="mouth">
+            <div class="food"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="resume">
       <div class="left">
         <h1>陳怡璇</h1>
@@ -411,13 +949,20 @@ hr{
           <h2>自我介紹</h2>
           <ul>
             <li>
-              在朋友的帶領下認識了「程式」這個和我大學所學相當不同的世界，之後便開始在網路上找各種自學資源， 在udemy、hahow、codecademy都有買相關課程，並且參加學校舉辦的相關研習課程及各種講座跟聚會，漸漸的對這領域產生了很大的興趣。<br>
-              我很注重細節，願意為了提升使用者的瀏覽體驗而多花時間與心力。<br>
-              喜歡嘗試新興技術，所學不只侷限於目前所熟悉的知識。<br>
-              善於團隊合作，能夠快速融入團隊氣氛，並一起為目標努力。<br>
+              在朋友的帶領下認識了「程式」這個和我大學所學相當不同的世界，之後便開始在網路上找各種自學資源， 在udemy、hahow、codecademy都有買相關課程，並且參加學校舉辦的相關研習課程及各種講座跟聚會，漸漸的對這領域產生了很大的興趣。<br><br>
+              我很注重細節，願意為了提升使用者的瀏覽體驗而多花時間與心力。<br><br>
+              喜歡嘗試新興技術，所學不只侷限於目前所熟悉的知識。<br><br>
               喜歡當問題解決者，不喜歡當問題製造者。
             </li>
           </ul>
+        </div>
+        <div class="block">
+          <div class="monster white">
+            <div class="eye">
+              <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+          </div>
         </div>
         <!-- <br> -->
         <!-- <div class="buttons" >
@@ -495,11 +1040,12 @@ hr{
             <div class="value p20"></div>
           </div>
         </li>
+        <br>
         <li>
-        1.了解HTML語意及了解CSS的動畫語意並且能將其活用在網頁排版及呈現動畫效果。<br>
-        2.對原生Javascript有基礎概念，目前常用jQuery練習做網頁動畫效果。<br>
-        3.能不倚賴framework進行客製化網頁設計，但也熟悉bootstrap可以利用此framework做網頁開發。<br>
-        4.了解vue.js基礎概念，並能串接第三方api資料。</li>
+        了解HTML語意及了解CSS的動畫語意並且能將其活用在網頁排版及呈現動畫效果。<br><br>
+        對原生Javascript有基礎概念，目前常用jQuery練習做網頁動畫效果。<br><br>
+        能不倚賴framework進行客製化網頁設計，但也熟悉bootstrap可以利用此framework做網頁開發。<br><br>
+        了解vue.js基礎概念，並能串接第三方api資料。</li>
       </ul>
     </div>
   </div>
@@ -513,23 +1059,26 @@ hr{
         </div>
         <div class="mouth"></div>
       </div>
+    </div>
       <h4>Portfolios</h4>
       <h2>作品集</h2>
       <ul class="listPortfolio">
-        <li class="madebyscratch">Scratch
+        <li class="scratch">Scratch
           <ul>
             <li><a class="potfoliohref"href="https://scratch.mit.edu/projects/200584455/" target="_blank">RPG對打小遊戲</a></li>
           </ul>
         </li>
-        <li class="madebygithub">Github  
+        <li class="website">Website  
           <ul>
             <li><a class="potfoliohref" href="http://catweb.hellokarla.nctu.me/?" target="_blank">購物網站(以貓咪為商品)</a></li>
             <li><a class="potfoliohref" href="http://foodblog.hellokarla.nctu.me/?" target="_blank">美食部落格(Bootstrap)</a></li>
             <li><a class="potfoliohref" href="http://resume.hellokarla.nctu.me/" target="_blank">聯合履歷</a></li>
             <li><a class="potfoliohref" href="http://maipple.hellokarla.nctu.me/?" target="_blank">服飾網站(仿照Maipple)</a></li>
+            <li><a class="potfoliohref" href="http://catsitter.hellokarla.nctu.me/?" target="_blank">貓咪褓母網頁</a></li>
+            <li><a class="potfoliohref" href="http://map.hellokarla.nctu.me/?" target="_blank">GoogleMap地圖api練習</a></li> 
           </ul>
         </li>
-        <li class="madebycodepen">CodePen
+        <li class="codepen">CodePen
           <ul>
             <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/QOeaXy" target="_blank">Square Monster</a></li>
             <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/dZvENo" target="_blank">Where is my cake?</a></li>
@@ -551,26 +1100,28 @@ hr{
           <ul>
             <li>Godiva歌帝梵</li>
             <li>情人節檔次</li>
-            <li>銷售工讀生</li>
+            <li>負責銷售情人節禮盒及店內商品</li>
           </ul>
         </li>
         <li class="year">2014
           <ul>
             <li>Le Panier de Paris</li>
             <li>法式甜點店工讀生</li>
+            <li>負責收銀以及製作甜點、包裝甜點</li>
           </ul>
         </li>  
         <li class="year">2015
           <ul>
             <li>Godiva歌帝梵</li>
-            <li>林口outlet店</li>
             <li>開幕期間工讀生</li>
+            <li>林口outlet店開幕時去支援工讀生，負責製作凍飲及收銀，凍飲曾一天破200杯紀錄</li>
           </ul>
         </li>  
         <li class="year">2016
           <ul>
             <li>佳欣牙醫</li>
             <li>牙醫助理</li>
+            <li>負責輸入病歷及協助醫生看診事宜</li>
           </ul>
         </li>  
       </ul>
@@ -593,6 +1144,7 @@ hr{
       </div>
     </div>
   </div>
+</div>
 </div>
 </div>
 </body>

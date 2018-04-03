@@ -1,0 +1,40 @@
+@mixin size($w,$h:$w,$bdrs: 0)
+  width: $w
+  height: $h
+  border-radius: $bdrs
+  
+@mixin flex($j:center,$a:center)
+  display: flex
+  justify-content: $j
+  align-items: $a
+  
+@mixin abpos($l:initial,$t:initial)
+  position: absolute
+  left: $l
+  top: $t
+
+.allstars
+  +size(100%)
+  +abpos(0,0)
+  
+  @keyframes falling
+    0%,100%
+      opacity: 0
+    70%
+      opacity: 1
+    0%
+      transform: translate(100px,0)
+    100%
+      transform: translate(0px,200px)
+
+[class^='star']
+  background-color: #fff
+  +size(3px,3px,50%)
+  animation: falling 2s infinite
+  
+@for $i from 1 through 50
+  .star#{$i}
+    $posX: random()*100%
+    $posY: random()*-80% + 50%
+    +abpos($posX,$posY)
+    animation-delay: $i*-0.1s
