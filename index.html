@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>My Resume</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -25,6 +26,7 @@ body{
   line-height:28px;
   letter-spacing:2px;
   font-weight: 400;
+  /* margin: 0 auto; */
 }
 ul{
   padding: 0;
@@ -385,7 +387,7 @@ hr{
     animation: jumping 0.4s infinite alternate;
     width: 30px;
     height: 30px;
-    animation: eyemove 1.4s infinite alternate 
+    animation: move 1.6s infinite alternate 
 }
 .white .mouth{
   background-color: #ffa1a1;
@@ -409,6 +411,14 @@ hr{
     }
     90%,100%{
         transform: translate(-50%);
+    }
+}
+@keyframes move{
+    0%,10%{
+        transform: translateX(185px);
+    }
+    90%,100%{
+        transform: translateX(-15px);
     }
 }
 .allstars{
@@ -738,82 +748,82 @@ hr{
     animation-delay:-5s
 }
 .scene{
-    width:200px;
-    height:180px;
+    width:300px;
+    height: 80px;
     display:flex;
     justify-content:center;
     align-items:center;
     background-color: transparent;
     position:relative;
-    background-color: black;
+    background-color: transparent;
 }
 .person1{
     position:relative
 }
 .person1 .hairs{
-    position:relative
+    position:relative;
 }
 .person1 .hairs .hair1{
-    width: 100px;
-    height:60px;
+    width: 60px;
+    height:40px;
     border-radius:40px;
     background-color:#f9f2e8;
     box-shadow:inset -10px -10px 0 rgba(0,0,0,0.1);
-    margin-left:10px
+    margin-left:5px;
 }
 .person1 .hairs .hair2{
-    width:100px;
-    height:40px;
+    width:60px;
+    height:35px;
     border-radius:30px;
     background-color:#f9f2e8;
     box-shadow:inset -10px -10px 0 rgba(0,0,0,0.1);
-    margin-left:40px;
+    margin-left:30px;
     margin-top:-25px
 }
 .person1 .hairs .hair3{
-    width:100px;
-    height:50px;
+    width:60px;
+    height:40px;
     border-radius:35px;
     background-color:#f9f2e8;
     box-shadow:inset -10px -10px 0 rgba(0,0,0,0.1);
     margin-left:-5px;
-    margin-top:-35px
+    margin-top:-30px
 }
-.person1 .body1{
-    width:140px;
-    height:130px;
-    border-radius:40px;
+.person1 .body{
+    width:84px;
+    height:100px;
+    border-radius:25px;
     padding-top:50px;
     margin-top:-40px;
     background-color:#f7d351;
     box-shadow:inset -10px -10px 0 rgba(0,0,0,0.1)
 }
-.person1 .body1 .eyes .eye{
-    width:40px;
-    height:22px;
-    border-radius:12.5px;
+.person1 .body .eyes .eye{
+    width:26px;
+    height:13px;
+    border-radius:10px;
     display:inline-block;
     margin-right:5px;
-    margin-left:15px;
-    background-color:#f9f2e8
+    margin-left:5px;
+    background-color:#f9f2e8;
 }
-.person1 .body1 .eyes .eye .eyeball{
-    width:22px;
-    height:22px;
-    border-radius:12.5px;
+.person1 .body .eyes .eye .eyeball{
+    width:13px;
+    height:13px;
+    border-radius:10px;
     background-color:#0f4e89
 }
-.person1 .body1 .mouth{
-    width:50px;
-    height:18px;
-    border-radius:12.5px;
-    margin-left:50px;
-    margin-top:10px;
+.person1 .body .mouth{
+    width:27px;
+    height:10px;
+    border-radius:10px;
+    margin-left:30px;
+    margin-top:-11px;
     background-color:#f4ad50
 }
-.person1 .body1 .mouth .food{
-    width:10px;
-    height:10px;
+.person1 .body .mouth .food{
+    width:7px;
+    height:7px;
     border-radius:6px;
     margin-left:-20px;
     margin-top:10px;
@@ -822,7 +832,7 @@ hr{
 .person1{
     transition:0.5s
 }
-.person1 .body1{
+.person1 .body{
     transition:0.5s,background-color 4s 1s
 }
 .person1 *{
@@ -831,27 +841,27 @@ hr{
 .scene:hover .person1{
     margin-top:50px
 }
-.scene:hover .person1 .body1{
+.scene:hover .person1 .body{
     box-shadow:inset -10px -10px 0 rgba(0,0,0,0.1),30px 10px rgba(0,0,0,0.1)
 }
-.scene:hover .person1 .body1 .hairs .hair3{
+.scene:hover .person1 .body .hairs .hair3{
     margin-left:0
 }
 .scene:hover .person1:hover{
     transform:translateX(40px)
 }
-.scene:hover .person1:hover .body1{
+.scene:hover .person1:hover .body{
     box-shadow:inset -10px -10px 0 rgba(0,0,0,0.1),-30px 10px rgba(0,0,0,0.1);
     background-color:#f4ad50
 }
 .scene:hover .person1:hover .eyes{
-    transform:translateX(20px)
+    transform:translateX(9px)
 }
 .scene:hover .person1:hover .eyeball{
     transform:translateX(15px)
 }
 .scene:hover .person1:hover .mouth{
-    transform:translateX(20px)
+    transform:translateX(10px)
 }
 .scene:active .person1{
     transform:scale(0.9)
@@ -859,9 +869,6 @@ hr{
 .scene:active .person1 .hairs{
     transform:translateY(-50px)
 }
-
-
-
     </style>
 </head>
 <body>
@@ -916,33 +923,19 @@ hr{
     <div class="star48"></div>
     <div class="star49"></div>
     <div class="star50"></div> 
-    <div class="scene">
-      <div class="person1">
-        <div class="hairs">
-          <div class="hair1"></div>
-          <div class="hair2"></div>
-          <div class="hair3"></div>
-        </div>
-        <div class="body1">
-          <div class="eyes">
-            <div class="eye">
-              <div class="eyeball"></div>
-            </div>
-            <div class="eye">
-              <div class="eyeball"></div>
-            </div>
-          </div>
-          <div class="mouth">
-            <div class="food"></div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="resume">
       <div class="left">
         <h1>陳怡璇</h1>
         <h2>Chen Yi Hsuan</h2>
         <h4>淡江大學公共行政學系｜四年級</h4>
+        <div class="block">
+          <div class="monster white">
+            <div class="eye">
+              <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+          </div>
+        </div>
         <hr>
         <div class="block">
           <h4>About</h4>
@@ -956,20 +949,186 @@ hr{
             </li>
           </ul>
         </div>
+        <div class="scene">
+          <div class="person1">
+            <div class="hairs">
+              <div class="hair1"></div>
+              <div class="hair2"></div>
+              <div class="hair3"></div>
+            </div>
+            <div class="body">
+              <div class="eyes">
+                <div class="eye">
+                  <div class="eyeball"></div>
+                </div>
+                <div class="eye">
+                  <div class="eyeball"></div>
+                </div>
+              </div>
+              <div class="mouth">
+                <div class="food"></div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="block">
-          <div class="monster white">
+          <h4>Programing Skills</h4>
+          <h2>程式技能</h2>
+          <ul class="listProgram">
+            <li>
+              Photoshop
+              <div class="bar">
+                <div class="value p50"></div>
+              </div>
+            </li>
+            <li>
+              HTML5&CSS3
+              <div class="bar">
+                <div class="value p85"></div>
+              </div>
+            </li>
+            <li>
+              Bootstrap
+              <div class="bar">
+                <div class="value p80"></div>
+              </div>
+            </li>
+            <li>
+              JavaScript
+              <div class="bar">
+                <div class="value p65"></div>
+              </div>
+            </li>
+            <li>
+              Pug&Sass
+              <div class="bar">
+                <div class="value p70"></div>
+              </div>
+            </li>
+            <li>
+              jQuery
+              <div class="bar">
+                <div class="value p40"></div>
+              </div>
+            </li>
+            <li>
+              Vue.js
+              <div class="bar">
+                <div class="value p20"></div>
+              </div>
+            </li>
+            <br>
+            <li>
+            了解HTML語意及了解CSS的動畫語意並且能將其活用在網頁排版及呈現動畫效果。<br><br>
+            對原生Javascript有基礎概念，目前常用jQuery練習做網頁動畫效果。<br><br>
+            能不倚賴framework進行客製化網頁設計，但也熟悉bootstrap可以利用此framework做網頁開發。<br><br>
+            了解vue.js基礎概念，並能串接第三方api資料。</li>
+          </ul>
+        </div>
+      </div>  
+      <div class="right">
+        <img src="./access/IMG_3755.png" class="profile img-circle">
+        <div class="decoration"></div>
+        <div class="block">
+          <div class="monster blue">
             <div class="eye">
               <div class="eyeball"></div>
             </div>
             <div class="mouth"></div>
           </div>
         </div>
-        <!-- <br> -->
-        <!-- <div class="buttons" >
+        <h4>Portfolios</h4>
+        <h2>作品集</h2>
+        <ul class="listPortfolio">
+          <li class="scratch">Scratch
+            <ul>
+              <li><a class="potfoliohref"href="https://scratch.mit.edu/projects/200584455/" target="_blank">RPG對打小遊戲</a></li>
+            </ul>
+          </li>
+          <li class="website">Website  
+            <ul>
+              <li><a class="potfoliohref" href="http://catweb.hellokarla.nctu.me/?" target="_blank">購物網站(以貓咪為商品)</a></li>
+              <li><a class="potfoliohref" href="http://foodblog.hellokarla.nctu.me/?" target="_blank">美食部落格(Bootstrap)</a></li>
+              <li><a class="potfoliohref" href="http://resume.hellokarla.nctu.me/" target="_blank">聯合履歷</a></li>
+              <li><a class="potfoliohref" href="http://maipple.hellokarla.nctu.me/?" target="_blank">服飾網站(仿照Maipple)</a></li>
+              <li><a class="potfoliohref" href="http://catsitter.hellokarla.nctu.me/?" target="_blank">貓咪褓母網頁</a></li>
+              <li><a class="potfoliohref" href="http://map.hellokarla.nctu.me/?" target="_blank">GoogleMap地圖api練習</a></li> 
+            </ul>
+          </li>
+          <li class="codepen">CodePen
+            <ul>
+              <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/QOeaXy" target="_blank">Square Monster</a></li>
+              <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/dZvENo" target="_blank">Where is my cake?</a></li>
+              <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/jaBVLv" target="_blank">閱樂書店書籤</a></li>
+              <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/KZPMdQ" target="_blank">飛鏢遊戲</a></li>
+              <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/JONRMB" target="_blank">簡單動畫</a></li>
+              <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/RjVpov" target="_blank">愛心動畫</a></li>
+              <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/NwjjGj" target="_blank">愛琴海卡片動畫</a></li>
+              <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/NXWrQY" target="_blank">摩斯密碼編譯器</a></li>
+              <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/RxgpaN" target="_blank">意見回覆表單</a></li>
+              <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/YYGjRV" target="_blank">貓咪褓母網頁(仿照Rover)</a></li>
+            </ul>
+          </li>
+        <div class="block">
+          <h4>Experience / Works</h4>
+          <h2>工作經歷</h2>
+          <ul class="listExperience">
+            <li class="year">2014
+              <ul>
+                <li>Godiva歌帝梵</li>
+                <li>情人節檔次</li>
+                <li>負責銷售情人節禮盒及店內商品</li>
+              </ul>
+            </li>
+            <li class="year">2014
+              <ul>
+                <li>Le Panier de Paris</li>
+                <li>法式甜點店工讀生</li>
+                <li>負責收銀以及製作甜點、包裝甜點</li>
+              </ul>
+            </li>  
+            <li class="year">2015
+              <ul>
+                <li>Godiva歌帝梵</li>
+                <li>開幕期間工讀生</li>
+                <li>林口outlet店開幕時去支援工讀生，負責製作凍飲及收銀，凍飲曾一天破200杯紀錄</li>
+              </ul>
+            </li>  
+            <li class="year">2016
+              <ul>
+                <li>佳欣牙醫</li>
+                <li>牙醫助理</li>
+                <li>負責輸入病歷及協助醫生看診事宜</li>
+              </ul>
+            </li>  
+          </ul>
+        </div>  
+        <div class="block">
+          <h4>More About Me</h4>
+          <h2>連結</h2>
+          <div class="buttons">
+            <a class="btn fill" href="https://codepen.io/KarenCodeDesign/" target="_blank">作品集</a>
+            <a class="btn" href="https://github.com/HelloKarla?tab=repositories" target="_blank">GitHub</a>
+          </div>
+        </div>
+        <div class="decoration2"></div>
+        <div class="decoration3">
+          <div class="monster">
+            <div class="eye">
+              <div class="eyeball"></div>
+            </div>
+            <div class="mouth"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- <br> -->
+<!-- <div class="buttons" >
           <a class="btn fill" href="https://codepen.io/KarenCodeDesign/" target="_blank">作品集</a>
           <a class="btn" href="https://github.com/HelloKarla?tab=repositories" target="_blank">GitHub</a>
         </div> -->
-    <!-- <div class="block">
+<!-- <div class="block">
       <h4>Skills</h4>
       <h2>專業技能</h2>
       <ul class="listSkill">
@@ -994,158 +1153,5 @@ hr{
         </li>
       </ul>
     </div> -->
-    <div class="block">
-      <h4>Programing Skills</h4>
-      <h2>程式技能</h2>
-      <ul class="listProgram">
-        <li>
-          Photoshop
-          <div class="bar">
-            <div class="value p50"></div>
-          </div>
-        </li>
-        <li>
-          HTML5&CSS3
-          <div class="bar">
-            <div class="value p85"></div>
-          </div>
-        </li>
-        <li>
-          Bootstrap
-          <div class="bar">
-            <div class="value p80"></div>
-          </div>
-        </li>
-        <li>
-          JavaScript
-          <div class="bar">
-            <div class="value p65"></div>
-          </div>
-        </li>
-        <li>
-          Pug&Sass
-          <div class="bar">
-            <div class="value p70"></div>
-          </div>
-        </li>
-        <li>
-          jQuery
-          <div class="bar">
-            <div class="value p40"></div>
-          </div>
-        </li>
-        <li>
-          Vue.js
-          <div class="bar">
-            <div class="value p20"></div>
-          </div>
-        </li>
-        <br>
-        <li>
-        了解HTML語意及了解CSS的動畫語意並且能將其活用在網頁排版及呈現動畫效果。<br><br>
-        對原生Javascript有基礎概念，目前常用jQuery練習做網頁動畫效果。<br><br>
-        能不倚賴framework進行客製化網頁設計，但也熟悉bootstrap可以利用此framework做網頁開發。<br><br>
-        了解vue.js基礎概念，並能串接第三方api資料。</li>
-      </ul>
-    </div>
-  </div>
-  <div class="right">
-    <img src="./access/IMG_3755.png" class="profile img-circle">
-    <div class="decoration"></div>
-    <div class="block">
-      <div class="monster blue">
-        <div class="eye">
-          <div class="eyeball"></div>
-        </div>
-        <div class="mouth"></div>
-      </div>
-    </div>
-      <h4>Portfolios</h4>
-      <h2>作品集</h2>
-      <ul class="listPortfolio">
-        <li class="scratch">Scratch
-          <ul>
-            <li><a class="potfoliohref"href="https://scratch.mit.edu/projects/200584455/" target="_blank">RPG對打小遊戲</a></li>
-          </ul>
-        </li>
-        <li class="website">Website  
-          <ul>
-            <li><a class="potfoliohref" href="http://catweb.hellokarla.nctu.me/?" target="_blank">購物網站(以貓咪為商品)</a></li>
-            <li><a class="potfoliohref" href="http://foodblog.hellokarla.nctu.me/?" target="_blank">美食部落格(Bootstrap)</a></li>
-            <li><a class="potfoliohref" href="http://resume.hellokarla.nctu.me/" target="_blank">聯合履歷</a></li>
-            <li><a class="potfoliohref" href="http://maipple.hellokarla.nctu.me/?" target="_blank">服飾網站(仿照Maipple)</a></li>
-            <li><a class="potfoliohref" href="http://catsitter.hellokarla.nctu.me/?" target="_blank">貓咪褓母網頁</a></li>
-            <li><a class="potfoliohref" href="http://map.hellokarla.nctu.me/?" target="_blank">GoogleMap地圖api練習</a></li> 
-          </ul>
-        </li>
-        <li class="codepen">CodePen
-          <ul>
-            <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/QOeaXy" target="_blank">Square Monster</a></li>
-            <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/dZvENo" target="_blank">Where is my cake?</a></li>
-            <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/jaBVLv" target="_blank">閱樂書店書籤</a></li>
-            <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/KZPMdQ" target="_blank">飛鏢遊戲</a></li>
-            <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/JONRMB" target="_blank">簡單動畫</a></li>
-            <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/RjVpov" target="_blank">愛心動畫</a></li>
-            <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/NwjjGj" target="_blank">愛琴海卡片動畫</a></li>
-            <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/NXWrQY" target="_blank">摩斯密碼編譯器</a></li>
-            <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/RxgpaN" target="_blank">意見回覆表單</a></li>
-            <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/YYGjRV" target="_blank">貓咪褓母網頁(仿照Rover)</a></li>
-          </ul>
-        </li>
-    <div class="block">
-      <h4>Experience / Works</h4>
-      <h2>工作經歷</h2>
-      <ul class="listExperience">
-        <li class="year">2014
-          <ul>
-            <li>Godiva歌帝梵</li>
-            <li>情人節檔次</li>
-            <li>負責銷售情人節禮盒及店內商品</li>
-          </ul>
-        </li>
-        <li class="year">2014
-          <ul>
-            <li>Le Panier de Paris</li>
-            <li>法式甜點店工讀生</li>
-            <li>負責收銀以及製作甜點、包裝甜點</li>
-          </ul>
-        </li>  
-        <li class="year">2015
-          <ul>
-            <li>Godiva歌帝梵</li>
-            <li>開幕期間工讀生</li>
-            <li>林口outlet店開幕時去支援工讀生，負責製作凍飲及收銀，凍飲曾一天破200杯紀錄</li>
-          </ul>
-        </li>  
-        <li class="year">2016
-          <ul>
-            <li>佳欣牙醫</li>
-            <li>牙醫助理</li>
-            <li>負責輸入病歷及協助醫生看診事宜</li>
-          </ul>
-        </li>  
-      </ul>
-      <div class="block">
-        <h4>More About Me</h4>
-        <h2>連結</h2>
-        <div class="buttons">
-          <a class="btn fill" href="https://codepen.io/KarenCodeDesign/" target="_blank">作品集</a>
-          <a class="btn" href="https://github.com/HelloKarla?tab=repositories" target="_blank">GitHub</a>
-        </div>
-      </div>
-    </div>
-    <div class="decoration2"></div>
-    <div class="decoration3">
-      <div class="monster">
-        <div class="eye">
-          <div class="eyeball"></div>
-        </div>
-        <div class="mouth"></div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
 </body>
 </html>
