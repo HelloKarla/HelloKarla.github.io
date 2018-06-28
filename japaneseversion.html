@@ -439,6 +439,21 @@
             .futureplan>li:nth-child(2) ul {
                 border-color: #fc9c9c;
             }
+            #top_div{
+                position:fixed;
+                bottom:50px;
+                right: 50px;
+                display:none;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: #fc9c9c;
+                cursor: pointer;
+                }
+            .gotop{
+            display: block;
+            margin: 15px auto;
+            }
 
     </style>
 </head>
@@ -597,13 +612,13 @@
                 <ul class="futureplan" style="opacity: 0.9">
                     <li>一年計画
                         <ul>
-                            <li>1.日本語能力試験 N４→ N２</li>
-                            <li>2.Front-endのプログラミングを使い分ける</li>
+                            <li>1.日本語能力試験<br>N４からN２に合格する事です</li>
+                            <li>2.Front-endのプログラミングを<br>使い分ける</li>
                         </ul>
                     </li>
                     <li>三年計画
                         <ul>
-                            <li>1.日本語能力試験 N２→ N１</li>
+                            <li>1.日本語能力試験<br>N２からN１に合格する事です</li>
                             <li>2.プラジェットを自分でできる</li>
                         </ul>
                     </li>
@@ -617,6 +632,9 @@
                 <div class="decoration2"></div>
                 <div class="decoration3"></div>
         </div>
+    </div>
+    <div id="top_div">
+        <img class="gotop" src="./access/icn-arrow-white-up.png">
     </div>
 </div>
 <!-- <br> -->
@@ -650,5 +668,19 @@
     </ul>
 </div> -->
 </body>
+<script>
+    window.onscroll = function () {
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+            var top_div = document.getElementById("top_div");
+            if (t >= 100) {
+                top_div.style.display = "inline";
+            } else {
+                top_div.style.display = "none";
+            }
+        }
 
+        $('#top_div').click(function () {
+            $('html,body').animate({ scrollTop: 0 }, 487);
+        });
+</script>
 </html>

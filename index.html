@@ -10,14 +10,13 @@
     <link rel="stylesheet" type="text/css" href="/path/to/modal-video.min.css">
     <link rel="stylesheet" href="./index.sass">
     <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="/path/to/modal-video.js"></script>
 
     <style>
 *{
   font-family: 'Cinzel','微軟正黑體';
 }
 body{
-  padding: 50px;
+  /* padding: 50px; */
   display: flex;
   justify-content: center;
   background-color: #6aa891;
@@ -67,6 +66,10 @@ h4{
   font-weight: 400;
   font-size: 18px;
 }
+label{
+  font-size: 16px;
+  opacity: 0.8;
+}
 .info{
     margin-top: 0px;
     margin-bottom: 20px;
@@ -79,7 +82,7 @@ a{
 hr{
   border: none;
   border-bottom: solid 4px #fca4a4;
-  width: 70%;
+  width: 95%;
   margin-left: 0;
 }
 
@@ -905,6 +908,38 @@ hr{
 .japan:hover{
     background-color: #fdbfbf;
 }
+.futureplan li{
+    display: flex; 
+    margin-bottom: 10px;         
+}
+.futureplan>li:nth-child(1) ul {
+    border-color: #f98686;
+}
+
+.futureplan>li:nth-child(2) ul {
+    border-color: #fc9c9c;
+}
+.futureplan li ul {
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: solid 3px white;
+}
+#top_div{
+      position:fixed;
+      bottom:50px;
+      right: 50px;
+      display:none;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #fc9c9c;
+      cursor: pointer;
+    }
+.gotop{
+  display: block;
+  margin: 15px auto;
+}
+
     </style>
 </head>
 <body>
@@ -912,7 +947,7 @@ hr{
     <a class="chinese" href="index.html">中文</a>
     <a class="japan" href="japaneseversion.html">日本語</a>
   </div>
-  <div class="allstars">
+  <!-- <div class="allstars">
     <div class="star1"></div>
     <div class="star2"></div>
     <div class="star3"></div>
@@ -962,34 +997,41 @@ hr{
     <div class="star47"></div>
     <div class="star48"></div>
     <div class="star49"></div>
-    <div class="star50"></div> 
+    <div class="star50"></div>  -->
     <div class="resume">
       <div class="left">
         <h1>陳怡璇</h1>
         <h2>Chen Yi Hsuan</h2>
-        <h4>淡江大學公共行政學系｜四年級</h4>
-        <div class="block">
+        <h4>淡江大學公共行政學系</h4>
+        <br>
+        <label style="margin-bottom: -10px">
+          生年月日：1995/12/17<br>
+          手機號碼：0923-216-123<br>
+          電子郵件：hfgc111@gmail.com
+        </label>
+        <!-- <div class="block">
           <div class="monster white">
             <div class="eye">
               <div class="eyeball"></div>
             </div>
             <div class="mouth"></div>
           </div>
-        </div>
+        </div> -->
         <hr>
         <div class="block">
           <h4>About</h4>
           <h2>自我介紹</h2>
-          <ul>
-            <li>
-              在朋友的帶領下認識了「程式」這個和我大學所學相當不同的世界，之後便開始在網路上找各種自學資源， 在udemy、hahow、codecademy都有買相關課程，並且參加學校舉辦的相關研習課程及各種講座跟聚會，漸漸的對這領域產生了很大的興趣。<br><br>
-              我很注重細節，願意為了提升使用者的瀏覽體驗而多花時間與心力。<br><br>
-              喜歡嘗試新興技術，所學不只侷限於目前所熟悉的知識。<br><br>
-              喜歡當問題解決者，不喜歡當問題製造者。
-            </li>
-          </ul>
+            <label>
+              原本打算大學畢業就直接考公務員一輩子安穩過完人生。<br>
+              但在朋友的引導下開始接觸到程式這個與當時的我八竿子打不著的領域。<br>
+              一開始是接觸swift，但後來在短短兩週的台大資訊班前端課程開始累積我對網頁前端的好奇心。
+              接著我開始在網路上找資源，參加各種關於程式的聚會，
+              如Hahow,Udemy,Codecademy等等的課程及swift girls,appworks school,六角學院等等所舉辦的分享會，
+              接觸到越多，就越增添了我對這領域的興趣。
+              到了今年四月，我終於真正踏進程式這個領域了，找到人生第一個程式實習。
+            </label>
         </div>
-        <div class="scene">
+        <!-- <div class="scene">
           <div class="person1">
             <div class="hairs">
               <div class="hair1"></div>
@@ -1010,7 +1052,7 @@ hr{
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="block">
           <h4>Programing Skills</h4>
           <h2>程式技能</h2>
@@ -1057,14 +1099,41 @@ hr{
                 <div class="value p20"></div>
               </div>
             </li>
-            <br>
             <li>
-            了解HTML語意及了解CSS的動畫語意並且能將其活用在網頁排版及呈現動畫效果。<br><br>
-            對原生Javascript有基礎概念，目前常用jQuery練習做網頁動畫效果。<br><br>
-            能不倚賴framework進行客製化網頁設計，但也熟悉bootstrap可以利用此framework做網頁開發。<br><br>
-            了解vue.js基礎概念，並能串接第三方api資料。</li>
+              Node.js
+              <div class="bar">
+                <div class="value p20"></div>
+              </div>
+            </li>
+            <br>
+            <li style="opacity: 0.9">
+            1.了解HTML語意及了解CSS的動畫語意並且能將其活用在網頁排版及呈現動畫效果。<br>
+            2.對原生Javascript有基礎概念，目前常用jQuery練習做網頁動畫效果。<br>
+            3.能不倚賴framework進行客製化網頁設計，但也熟悉bootstrap亦可利用此framework做網頁開發。<br>
+            4.了解vue.js基礎概念，並能串接第三方api資料。<br>
+            5.能使用FTP,Git進行版本控制
+          </li>
           </ul>
         </div>
+        <h4>Future Plan</h4>
+        <h2>未来的計畫</h2>
+        <ul class="futureplan" style="opacity: 0.9">
+          <li>半年
+            <ul>
+              <li>1.從網頁設計到網頁前端</li>
+              <li>2.熟悉Git版本控制</li>
+              <li>3.熟悉一種前端框架</li>
+              <li>4.從無到有架出完整的網站</li>
+            </ul>
+          </li>
+          <li>一年
+            <ul>
+              <li>1.學會開發Web API</li>
+              <li>2.學習Ruby on Rails</li>
+              <li>3.學會雲端架站</li>
+            </ul>
+          </li>
+        </ul>
       </div>  
       <div class="right">
         <img src="./access/IMG_3755.png" class="profile img-circle">
@@ -1110,10 +1179,11 @@ hr{
               <li><a class="potfoliohref"href="https://codepen.io/KarenCodeDesign/pen/YYGjRV" target="_blank">貓咪褓母網頁(仿照Rover)</a></li>
             </ul>
           </li>
+          <br>
         <div class="block">
           <h4>Experience / Works</h4>
           <h2>工作經歷</h2>
-          <ul class="listExperience">
+          <ul class="listExperience" style="opacity: 0.9">
             <li class="year">2014
               <ul>
                 <li>Godiva歌帝梵</li>
@@ -1146,7 +1216,10 @@ hr{
               <ul>
                 <li>天王星多媒體(Panasonic網路廣告公司)</li>
                 <li>前端學生實習</li>
-                <li>輔助前端主管專案維護及管理</li>
+                <li>1.按照設計部門給的設計圖切版製作RWD版本網站</li>
+                <li>2.維護及優化網站及程式碼</li>
+                <li>3.FTP、Git版控</li>
+                <li>4.SEO搜尋引擎優化</li>
               </ul>
             </li> 
           </ul>
@@ -1169,8 +1242,10 @@ hr{
           </div>
         </div>
       </div>
+      <div id="top_div">
+        <img class="gotop" src="./access/icn-arrow-white-up.png">
+      </div>
     </div>
-  </div>
 <!-- <br> -->
 <!-- <div class="buttons" >
           <a class="btn fill" href="https://codepen.io/KarenCodeDesign/" target="_blank">作品集</a>
@@ -1202,4 +1277,19 @@ hr{
       </ul>
     </div> -->
 </body>
+<script>
+  window.onscroll = function () {
+      var t = document.documentElement.scrollTop || document.body.scrollTop;
+      var top_div = document.getElementById("top_div");
+      if (t >= 100) {
+        top_div.style.display = "inline";
+      } else {
+        top_div.style.display = "none";
+      }
+    }
+    
+        $('#top_div').click(function () {
+          $('html,body').animate({ scrollTop: 0 }, 487);
+        });
+</script>
 </html>
